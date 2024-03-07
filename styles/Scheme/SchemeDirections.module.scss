@@ -1,0 +1,14 @@
+.scheme__directions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .scheme__directions {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}

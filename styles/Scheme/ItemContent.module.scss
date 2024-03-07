@@ -1,0 +1,49 @@
+.item {
+    &__title {
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__title.bold {
+        font-weight: bold;
+    }
+
+    &__text {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &__text sup {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .item {
+        &__title {
+            font-size: 24px;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+
+        &__text sup {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .item {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+}

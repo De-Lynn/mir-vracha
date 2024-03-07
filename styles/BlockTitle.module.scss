@@ -1,0 +1,45 @@
+.block {
+    &__title {
+        background: url(/title-img.svg) no-repeat;
+        background-size: contain;
+        height: 110px;
+        padding-top: 18px;
+        padding-left: 45px;
+        margin-left: -45px;
+    }
+}
+
+.title {
+    &__text {
+        font-size: 40px;
+        font-weight: bold;
+        color: #01457a;
+        font-family: Century Gothic; 
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .title {
+        &__text {
+           font-size: 34px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .block {
+        &__title {
+            background-size: cover;
+            height: 80px;
+            padding-left: 25px;
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+    }
+    
+    .title {
+        &__text {
+           font-size: 24px;
+        }
+    }
+}

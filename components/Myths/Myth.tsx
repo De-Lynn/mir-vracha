@@ -1,0 +1,29 @@
+import Link from 'next/link'
+import styles from '../../styles/Myths/MythsList.module.scss'
+
+export default function Myth({children, params}) {
+    return (
+        <div className={styles.list__item}>
+            <div className={styles.item__icon}>
+                <img className={styles.icon__image} src={params.img} alt="" />
+            </div>
+            <div className={styles.item__title}>
+                <div className={styles.title__text}>
+                    {children}
+                </div>
+            </div>
+            <div className={styles.item__content}>
+                <div className={styles.content__text}>
+                    {params.text}
+                </div>
+                <div className={styles.content__effect}></div>
+            </div>
+            <Link href={params.link}>
+                <button className={`${styles.item__button} ${styles[params.btnColor]}`}>
+                    <img className={styles.button__image} src="/pointer.svg" alt="" />
+                </button>
+            </Link>
+            
+        </div>
+    )
+}
