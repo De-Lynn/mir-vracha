@@ -24,8 +24,8 @@ const Index = () => {
                     </div>
                     <SchemeDirections />
                     <div className={styles.scheme__arrow}>
-                        <Image className={styles.arrow} src="/arrow.svg" alt="" unoptimized/>
-                        <Image className={styles.arrow} src="/arrow.svg" alt="" unoptimized/>
+                        <img className={styles.arrow} src="/mir-vracha/arrow.svg" alt=""/>
+                        <img className={styles.arrow} src="/mir-vracha/arrow.svg" alt=""/>
                     </div>
                     <SchemeRecomms />
                 </div>
