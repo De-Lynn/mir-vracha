@@ -6,7 +6,7 @@ export default function DirectionsItem({children, params}) {
             {params.hasImg && 
                 <div className={styles.item__icon}>
                     <div className={styles.icon__text}>{params.id}</div>
-                    <img className={styles.icon__image} src="/inhaler.svg" alt="" />
+                    <img className={styles.icon__image} src="./inhaler.svg" alt="" />
                 </div>
             }
             {children}

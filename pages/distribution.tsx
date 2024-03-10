@@ -19,7 +19,7 @@ const Distribution = ({btnColor, turning}) => {
                     внутренний диаметр и толщину дыхательных путей по сравнению с курящими мужчинами.
                 </div>
             </div>
-            <img className={styles.img} src="/diagram.svg" alt="" />
+            <img className={styles.img} src="./diagram.svg" alt="" />
         </div>
     )
 }

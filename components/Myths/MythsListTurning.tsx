@@ -5,8 +5,8 @@ import styles from '../../styles/Myths/MythsList.module.scss'
 import Myth from './MythAnotherPage'
 
 const list = [
-    {id: 1, img: '/mir-vracha/myth-icon1.svg', btnColor: 'blue', link: '/distribution', text: 'В десятилетнем исследовании «Генетическая эпидемиология ХОБЛ» (COPDGene) среди пациентов с ХОБЛ, диагностированной до 55 лет, было выявлено преобладание...',},
-    {id: 2, img: '/mir-vracha/myth-icon2.svg', btnColor: 'green', link: '/danger', text: 'Большинство пациентов с ХОБЛ столкнется с обострениями: как минимум одно среднетяжелое или тяжелое обострение случится в течение...',}
+    {id: 1, img: './myth-icon1.svg', btnColor: 'blue', link: '/distribution', text: 'В десятилетнем исследовании «Генетическая эпидемиология ХОБЛ» (COPDGene) среди пациентов с ХОБЛ, диагностированной до 55 лет, было выявлено преобладание...',},
+    {id: 2, img: './myth-icon2.svg', btnColor: 'green', link: '/danger', text: 'Большинство пациентов с ХОБЛ столкнется с обострениями: как минимум одно среднетяжелое или тяжелое обострение случится в течение...',}
 ]
 
 export default function MythsList() {
@@ -24,7 +24,7 @@ export default function MythsList() {
                 <button className={`${styles.item__button} ${styles[list[0].btnColor]}`}
                     onClick={() => setRotated({...rotated, 1:!rotated[1]})}
                 >
-                    <img className={styles.button__image} src="/mir-vracha/pointer.svg" alt="" />
+                    <img className={styles.button__image} src="./pointer.svg" alt="" />
                 </button>
             </div>
 
@@ -38,7 +38,7 @@ export default function MythsList() {
                 <button className={`${styles.item__button} ${styles[list[1].btnColor]}`}
                     onClick={() => setRotated({...rotated, 2:!rotated[2]})}
                 >
-                    <img className={styles.button__image} src="/mir-vracha/pointer.svg" alt="" />
+                    <img className={styles.button__image} src="./pointer.svg" alt="" />
                 </button>
             </div>
             

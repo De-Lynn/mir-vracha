@@ -70,7 +70,7 @@
     &__icon {
         width: 80px;
         height: 80px;
-        background: url(/myth-bg.svg);
+        background: url(../../public/myth-bg.svg);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -82,7 +82,7 @@
         width: 297px;
         padding-block: 7px;
         flex-shrink: 0;
-        background: url(/myth-title.svg) no-repeat;
+        background: url(../../public/myth-title.svg) no-repeat;
         display: flex;
         align-items: center;
     }
