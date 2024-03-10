@@ -3,7 +3,7 @@ const nextConfig = {
     output: "export",
     reactStrictMode: true,
     images: {
-        path: "/mir-vracha/"
+        path: "/mir-vracha"
     },
 };
 
