@@ -1,6 +1,5 @@
 const nextConfig = {
     basePath: "/mir-vracha",
-    // basePath: "",
     output: "export",
     reactStrictMode: true,
     images: {
