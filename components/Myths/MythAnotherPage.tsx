@@ -24,7 +24,7 @@ export default function Myth({children, params, turning}) {
             {!turning &&
                 <Link href={params.link}>
                     <button className={`${styles.item__button} ${styles[params.btnColor]}`}>
-                        <img className={styles.button__image} src="./pointer.svg" alt="" />
+                        <img className={styles.button__image} src="/pointer.svg" alt="" />
                     </button>
                 </Link>
             }
