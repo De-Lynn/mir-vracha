@@ -1,8 +1,9 @@
 import styles from '../styles/distribution.module.scss'
+import outer from '../styles/Myths/MythsList.module.scss'
 
-const Distribution = () => {
+const Distribution = ({btnColor, turning}) => {
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper + (turning ? (' ' + outer.card__back) : '')}>
             <div className={styles.text}>
                 <div className={styles.text__paragraph}>
                     В десятилетнем исследовании 

@@ -1,5 +1,7 @@
 import DangerItem from '../components/DangerItem'
 import styles from '../styles/danger.module.scss'
+import outer from '../styles/Myths/MythsList.module.scss'
+
 
 const list = [
     {id: 1, img: '/danger1.svg', percent: '45,5%', title: 'сердечной недостаточностью1', text: 'Популяционное когортное исследование (N=385)'},
@@ -7,9 +9,9 @@ const list = [
     {id: 3, img: '/danger3.svg', percent: '50,5%', title: 'раком мочевого пузыря', text: 'Исследование Национальной статистической службы (N=42642)'},
 ]
 
-const Danger = () => {
+const Danger = ({btnColor, turning}) => {
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper + (turning ? (' ' + outer.card__back) : '')}>
             <div className={styles.text}>
                 <div className={styles.text__paragraph}>
                     <span className={styles.bold}>

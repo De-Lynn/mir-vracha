@@ -1,3 +1,43 @@
+.card {
+    position: relative;
+
+    &__front {
+        z-index: 1;
+        position: relative;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 1s cubic-bezier(.2,.85,.4,1.275);
+    }
+
+    &__back {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+
+        height: auto;
+        max-height: 100px;
+        overflow: hidden;
+
+        backface-visibility: hidden;
+        transform: rotateY(-180deg);
+        transition: 
+            transform 1s cubic-bezier(.2,.85,.4,1.275), 
+            max-height 4s;
+    }
+}
+
+.card.rotated {
+    .card__back {
+        transform: rotateY(0deg);
+        z-index: 2;
+        max-height: 4000px;
+    }
+
+    .card__front {
+        transform: rotateY(180deg);
+        z-index: -1;
+    }
+}
 
 .block {
     &__list {
@@ -61,6 +101,7 @@
         border: none;
         border-radius: 50%;
         cursor: pointer;
+        z-index: 1;
     }
 
     &__button.blue {
@@ -73,6 +114,10 @@
 
 }
 
+.card.rotated .item__button {
+    z-index: 2;
+}
+
 .title {
     &__text {
         width: 248px;
@@ -83,6 +128,7 @@
     }
 }
 
+/* при открытии на отдельной странице */
 .content {
     &__effect {
         position: absolute;

@@ -53,6 +53,31 @@
     max-width: 425px;
 }   
 
+.switch {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+
+    &__control {
+        display: flex;
+        column-gap: 10px;
+
+    }
+
+    &__btn {
+        padding: 4px;
+        border: none;
+    }
+
+    &__btn.active {
+        background-color: #01457A;
+        color: white;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .wrapper {
         padding-bottom: 60px;

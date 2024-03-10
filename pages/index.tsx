@@ -1,16 +1,36 @@
-import Image from "next/image"
+import { useState } from "react"
 import BlockTitle from "../components/BlockTitle"
-import MythsList from "../components/Myths/MythsList"
+import MythsAnotherPage from "../components/Myths/MythsListAnotherPage"
+import MythsTurning from '../components/Myths/MythsListTurning'
 import SchemeDirections from "../components/Scheme/SchemeDirections"
 import SchemeRecomms from "../components/Scheme/SchemeRecomms"
 import styles from '../styles/index.module.scss'
 
 const Index = () => {
+    const [method, setMethod] = useState('page')
+
     return (
         <div className={styles.wrapper}>
+
+            <div className={styles.switch}>
+                Switch
+                <div className={styles.switch__control}>
+                    <button className={styles.switch__btn + (method === 'page' ? (' ' + styles.active) : '')} 
+                        onClick={() => setMethod('page')}
+                    >
+                        Another page
+                    </button>
+                    <button className={styles.switch__btn + (method === 'turning' ? (' ' + styles.active) : '')} 
+                        onClick={() => setMethod('turning')}
+                    >
+                        Turning over
+                    </button>
+                </div>
+            </div>
             <div className={styles.block}>
                 <BlockTitle text={'ХОБЛ: мифы и реальность'}/>
-                <MythsList />
+                {method === 'page' && <MythsAnotherPage />}
+                {method === 'turning' && <MythsTurning />}
             </div>
             <div className={styles.block}>
                 <BlockTitle text={'Терапия ХОБЛ: что в фокусе?'}/>
@@ -24,8 +44,8 @@ const Index = () => {
                     </div>
                     <SchemeDirections />
                     <div className={styles.scheme__arrow}>
-                        <Image className={styles.arrow} src="/arrow.svg" alt=""/>
-                        <Image className={styles.arrow} src="/arrow.svg" alt=""/>
+                        <img className={styles.arrow} src="/arrow.svg" alt=""/>
+                        <img className={styles.arrow} src="/arrow.svg" alt=""/>
                     </div>
                     <SchemeRecomms />
                 </div>
