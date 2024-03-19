@@ -1,6 +1,7 @@
 import styles from '../../styles/Scheme/DirectionsItem.module.scss'
+import item from '../../styles/Scheme/ItemContent.module.scss'
 
-export default function DirectionsItem({children, params}) {
+export default function DirectionsItem({params}) {
     return (
         <div className={styles.directions__item}>
             {params.hasImg && 
@@ -9,7 +10,8 @@ export default function DirectionsItem({children, params}) {
                     <img className={styles.icon__image} src="./inhaler.svg" alt="" />
                 </div>
             }
-            {children}
+            <div className={item.item__title} dangerouslySetInnerHTML={{__html: params.title}}/>
+            <div className={item.item__text} dangerouslySetInnerHTML={{__html: params.text}}/>
         </div>
     )
 }

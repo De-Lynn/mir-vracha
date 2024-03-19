@@ -1,16 +1,14 @@
 import Link from 'next/link'
 import styles from '../../styles/Myths/MythsList.module.scss'
 
-export default function Myth({children, params, turning}) {
+export default function Myth({params, turning}) {
     return (
         <div className={styles.list__item + ' ' + styles.card__front}>
             <div className={styles.item__icon}>
                 <img className={styles.icon__image} src={params.img} alt="" />
             </div>
             <div className={styles.item__title}>
-                <div className={styles.title__text}>
-                    {children}
-                </div>
+                <div className={styles.title__text} dangerouslySetInnerHTML={{__html: params.title}}/>
             </div>
 
             {/* при открытии на отдельной странице */}
